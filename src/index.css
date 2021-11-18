@@ -1,0 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.header a:hover {
+  color: rgb(17, 100, 17);
+  font-weight: 800;
+}
+
