@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body {
   font-size: 'Roboto Condensed', sans-serif;
@@ -15,6 +16,63 @@ ul, li {
 .header .nav-link:hover {
   text-decoration: underline;
   transition: all .5s ease-in-out;
+}
+
+.welcome-page {
+  position: relative; 
+  height: 85vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome-page::before {
+  content: "";
+  background-image: url(./imgs/welcome_3.jpeg);
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  filter: brightness(40%);
+}
+
+.welcome-page h2 {
+  position: absolute;
+  top: 40%;
+  z-index: 100;
+  text-align: center;
+  color: white;
+}
+
+.welcome-page .typing-text {
+  animation:
+    typing 4s steps(17),
+    blinkingCaret 1s steps(1) infinite;
+  border-right: .03em solid;
+  color: #FFF;
+  margin: 0 auto;
+  font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 6ch;
+}
+
+@keyframes typing {
+  from { width: 0 }
+}
+
+@keyframes blinkingCaret {
+  50% { border-color: transparent }
+}
+
+@media screen and (min-width: 900px) {
+  .welcome-page h2 {
+    font-size: 180px;
+  }
 }
 
 
