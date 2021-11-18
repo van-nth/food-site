@@ -75,4 +75,20 @@ ul, li {
   }
 }
 
+.game-page {
+  padding: 1rem 2rem;
+}
+
+.game-page .active {
+  color: white;
+  background-color: black;
+  border: 1px solid #ccc;
+}
+
+.game-page .inactive {
+  color: black;
+  background-color: white;
+  border: 1px solid #ccc;
+}
+
 

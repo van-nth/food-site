@@ -6,6 +6,7 @@ import {
 
 import Header from './Header';
 import Welcome from "./Welcome";
+import Game from './Game';
 import HeroBanner from "./HeroBanner";
 import Overview from "./Overview";
 import CookingMethod from './CookingMethod';
@@ -19,6 +20,7 @@ function App() {
       <Header />
       <Routes>
         <Route exact path="/" element={<Welcome />}></Route>
+        <Route path="/game" element={<Game />}></Route>
         <Route path="/overview" element={<Overview />}></Route>
         <Route path="/cooking-method" element={<CookingMethod />}></Route>
         <Route path="/facts" element={<Facts />}></Route>

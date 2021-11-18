@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 
 const navItems = [
   {
+    id: "game",
+    name: "Game"
+  },
+  {
     id: "overview",
     name: "Overview"
   },
