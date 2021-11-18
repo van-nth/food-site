@@ -9,6 +9,7 @@ import HeroBanner from "./HeroBanner";
 import Overview from "./Overview";
 import CookingMethod from './CookingMethod';
 import Facts from './Facts';
+import Footer from "./Footer";
 
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
         <Route path="/cooking-method" element={<CookingMethod />}></Route>
         <Route path="/facts" element={<Facts />}></Route>
       </Routes>
-      
+      <Footer />
     </Router>
   );
 }

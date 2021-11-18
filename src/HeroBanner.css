@@ -1,7 +1,8 @@
 .hero {
   position: relative; 
-  height: 100vh;
+  height: 85vh;
   width: 100%;
+  overflow: hidden;
 }
 
 .hero::before {    
@@ -40,7 +41,16 @@
 }
 
 .hero img:hover {
-  transform: scale(1.3);
+  animation: spin 1s linear;
+}
+
+@keyframes spin { 
+  from { 
+    transform: rotate(0deg); 
+  } 
+  to { 
+    transform: rotate(360deg); 
+  } 
 }
 
 .sub-pinyin {
@@ -48,7 +58,13 @@
 }
 
 .sub-pinyin:hover {
-  transform: scale(1.5);
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 600px) {
+  .hero img {
+    width: 40%;
+  }
 }
 
 @media screen and (min-width: 900px) {
