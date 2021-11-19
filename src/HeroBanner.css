@@ -1,11 +1,11 @@
 .hero {
   position: relative; 
-  height: 85vh;
+  height: 80vh;
   width: 100%;
   overflow: hidden;
 }
 
-.hero::before {    
+.hero::before {
   content: "";
   background-image: url(./imgs/bg_img_1.jpeg);
   background-size: cover;
@@ -36,7 +36,7 @@
 }
 
 .hero img {
-  min-width: 40%;
+  width: 50%;
   transition: transform .5s ease;
 }
 
@@ -67,16 +67,3 @@
   }
 }
 
-@media screen and (min-width: 900px) {
-  .hero h1 {
-    font-size: 180px;
-  }
-  
-  .hero h3 {
-    font-size: 40px;
-  }
-  
-  .hero span {
-    font-size: 24px;
-  }
-}

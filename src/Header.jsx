@@ -28,7 +28,7 @@ function Header() {
   }
   
   return (
-    <div className="header bg-gray-900 px-4 py-3 flex justify-between items-center md:px-20 md:py-4">
+    <div className="fixed top-0 w-full header bg-gray-900 px-4 py-3 flex justify-between items-center md:px-20 md:py-4">
       <Link to="/">
         <div className="w-60 logo flex items-center justify-center px-2 py-2  md:px-4 text-3xl border-2 border-solid border-white">
           <span className="text-red-500 text-xl md:text-xl xl:text-3xl">越南</span>
