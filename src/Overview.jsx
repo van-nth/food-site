@@ -1,9 +1,10 @@
 import React from 'react';
+import HeroBanner from './HeroBanner';
 
 function Overview() {
   return (
     <div>
-      <h2>Overview</h2>
+      <HeroBanner />
     </div>
   )
 }

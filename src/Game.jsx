@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import hints from './data';
 import CountDown from './CountDown';
+import Modal from './Modal';
 
 const allButtons= [...new Set(hints.map(hint => hint.name))];
 
@@ -14,6 +16,8 @@ function Game() {
   const [tab, setTab] = useState('');
   const [showAllHints, setShowAllHints] = useState(false);
   const [showCountDown, setShowCountDown] = useState(false);
+  
+
   
   //Filter Function
   const filter = (button) =>{
@@ -76,7 +80,8 @@ function Game() {
         <div className="col-2">
           <button
             onClick={() => setShowAllHints(!showAllHints)}
-            className="my-4 md:mt-0 flex items-center justify-center bg-gray-900 text-white text-xl border-none rounded-md px-4 py-3 mb-4"
+            className="my-4 md:mt-0 flex items-center justify-center bg-gray-900 
+            text-white text-xl border-none rounded-md px-4 py-3 mb-4 hover:opacity-10"
           >
             <span>All hints</span> 
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -108,8 +113,21 @@ function Game() {
           {showCountDown && (
             <CountDown hours={0} minutes={0} seconds={15} />
           )}
-        </div>
+         </div>
       </div>
+      
+      <div className="answer">
+        <Modal />
+      </div>
+      
+      <Link to="/overview">
+        <div className="next-slide fixed bottom-20 right-4 flex items-center mb-4 cursor-pointer text-sm md:text-xl hover:text-green-600 hover:font-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p className="hidden md:flex">Tiếp theo: Giới thiệu chung về món ăn</p>
+        </div>
+      </Link>
     </div>
   )
 }
