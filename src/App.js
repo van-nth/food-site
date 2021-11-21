@@ -7,7 +7,6 @@ import {
 import Header from './Header';
 import Welcome from "./Welcome";
 import Game from './Game';
-import HeroBanner from "./HeroBanner";
 import Overview from "./Overview";
 import CookingMethod from './CookingMethod';
 import Facts from './Facts';

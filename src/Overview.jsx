@@ -46,11 +46,11 @@ function Overview() {
         ref={setRef}
         style = {{
           height: "100vh",
-          backgroundColor: visible ? "#F3F0D7" : "#efefef"
         }}
       >
         {visible ? (
           <div className="section-2 px-4 py-3 md:px-20 md:py-4">
+            <h2 className="ribbon-heading text-center mt-4 md:ml-20">Overview</h2>
             <div className="w-full md:grid grid-cols-3 items-center gap-4">
               <div className="text-sm md:text-xl leading-4 md:col-span-2">
                 <h2 className="main-heading text-xl text-center md:text-6xl mb-10 text-green-600">Tại sao lại gọi là cơm tấm?</h2>

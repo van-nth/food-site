@@ -29,6 +29,7 @@ function Game() {
   
   return (
     <div className="game-page overscroll-y-none">
+      <h2 className="ribbon-heading text-center mt-4 md:ml-20">Game</h2>
       <h2 className="text-red-700 font-semibold text-center text-2xl mb-4">TRÒ CHƠI: ĐOÁN TÊN MÓN ĂN</h2>
       <ul>
         <strong className="underline">Luật chơi</strong>: Có tổng cộng 6 gợi ý, các đội lần lượt chọn số từ 1-6 để tìm gợi ý cho câu hỏi <strong className="italic">"Chủ đề hôm nay của nhóm 3 là món ăn gì?"</strong>

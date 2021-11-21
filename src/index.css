@@ -18,6 +18,30 @@ ul, li {
   transition: all .5s ease-in-out;
 }
 
+.ribbon-heading {
+  background: #2c5e77;
+  color: #fff;
+  display: inline-block;
+  font-size: 26px;
+  line-height: 60px;
+  padding: 0 2em 0 1em;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.ribbon-heading::after {
+  content: "";
+  position: absolute;
+  width: 0; 
+  height: 0;
+  right: 0;
+  border-top: 30px solid transparent;
+  border-bottom: 30px solid transparent; 
+  border-right: 30px solid #fff;
+}
+
+/* Welcome Page */
+
 .welcome-page {
   position: relative; 
   height: 85vh;
@@ -75,6 +99,8 @@ ul, li {
   }
 }
 
+/* Game Page */
+
 .game-page {
   padding: 1rem 2rem;
   min-height: 85vh;
@@ -109,6 +135,8 @@ ul, li {
   }
 }
 
+/* Overview Page */
+
 .overview-page img {
   animation-duration: 3s;
   animation-name: slideright;
@@ -125,6 +153,32 @@ ul, li {
     width: 100%;
   }
 }
+
+/* Method Page */
+
+.method-page {
+  width: 100%;
+}
+
+.cooking-steps {
+  max-width: 90%;
+}
+
+.cooking-steps .steps-content {
+  min-height: 200px;
+  margin-top: 16px;
+  padding-top: 80px;
+  text-align: center;
+  background-color: #fafafa;
+  border: 1px dashed #e9e9e9;
+  border-radius: 2px;
+}
+
+.cooking-steps .steps-action {
+  margin-top: 24px;
+}
+
+/* Cooking Table */
 
 
 
