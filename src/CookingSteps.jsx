@@ -139,7 +139,7 @@ const CookingSteps = () => {
         ))}
       </Steps>
       <div className="steps-content px-4 py-3 md:px-6 md:py-4 my-4 overflow-hidden text-sm md:text-xl">
-        <h2 className="text-xl md:text-3xl text-blue-600">{steps[current].content}</h2>
+        <h2 className="main-heading text-xl md:text-3xl">{steps[current].content}</h2>
         <CookingTable steps={steps} current={current}/>
       </div>
       
