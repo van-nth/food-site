@@ -29,7 +29,7 @@ function Game() {
   
   return (
     <div className="game-page overscroll-y-none">
-      <h2 className="ribbon-heading text-center mt-4 md:ml-20">Game</h2>
+      <h2 className="ribbon-heading text-center mt-4 md:ml-20">游戏</h2>
       <h2 className="text-red-700 font-semibold text-center text-2xl mb-4">TRÒ CHƠI: ĐOÁN TÊN MÓN ĂN</h2>
       <ul>
         <strong className="underline">Luật chơi</strong>: Có tổng cộng 6 gợi ý, các đội lần lượt chọn số từ 1-6 để tìm gợi ý cho câu hỏi <strong className="italic">"Chủ đề hôm nay của nhóm 3 là món ăn gì?"</strong>
@@ -49,7 +49,7 @@ function Game() {
                   filter(button)
                   setTab(button)
                   if (tab === button) {
-                    alert('Ô này đã được mở. Vui lòng chọn ô khác!')
+                    alert('这个暗示已经打开了! 选择其他的吧')
                   }
                 }}
                 className={`${tab === button ? 'active' : 'inactive'}
@@ -84,7 +84,7 @@ function Game() {
             className="my-4 md:mt-0 flex items-center justify-center bg-gray-900 
             text-white text-xl border-none rounded-md px-4 py-3 mb-4 hover:opacity-10"
           >
-            <span>All hints</span> 
+            <span>游戏暗示</span> 
             <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
             </svg>
@@ -107,7 +107,7 @@ function Game() {
           <button
             onClick={() => setShowCountDown(!showCountDown)}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-20 w-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </button>
@@ -122,12 +122,12 @@ function Game() {
       </div>
       
       <Link to="/overview">
-        <div className="next-slide fixed bottom-20 right-4 flex items-center mb-4 cursor-pointer text-sm md:text-xl hover:text-green-600 hover:font-bold">
+        <h4 className="next-slide fixed bottom-24 right-10 flex items-center mb-4 cursor-pointer text-sm md:text-xl hover:text-green-600 hover:font-bold">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <p className="hidden md:flex">Tiếp theo: Giới thiệu chung về món ăn</p>
-        </div>
+          <span className="hidden md:flex">下一页: 菜肴的简介</span>
+        </h4>
       </Link>
     </div>
   )

@@ -58,7 +58,8 @@ header, footer {
 
 /* Welcome Page */
 
-.welcome-page {
+.welcome-page,
+.thank-page {
   position: relative; 
   height: 85vh;
   width: 100%;
@@ -68,7 +69,8 @@ header, footer {
   justify-content: center;
 }
 
-.welcome-page::before {
+.welcome-page::before,
+.thank-page::before {
   content: "";
   background-image: url(./imgs/welcome_3.jpeg);
   background-size: cover;
@@ -80,7 +82,8 @@ header, footer {
   filter: brightness(40%);
 }
 
-.welcome-page h2 {
+.welcome-page h2,
+.thank-page h2 {
   position: absolute;
   top: 35%;
   z-index: 100;
@@ -101,6 +104,19 @@ header, footer {
   width: 10ch;
 }
 
+.thank-page .typing-text {
+  animation:
+    typing 4s steps(30),
+    blinkingCaret 1s steps(1) infinite;
+  border-right: .03em solid;
+  color: #FFF;
+  margin: 0 auto;
+  font-family: 'Source Code Pro', monospace;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 13ch;
+}
+
 @keyframes typing {
   from { width: 0 }
 }
@@ -110,8 +126,9 @@ header, footer {
 }
 
 @media screen and (min-width: 900px) {
-  .welcome-page h2 {
-    font-size: 180px;
+  .welcome-page h2,
+  .thank-page h2 {
+    font-size: 160px;
   }
 }
 
@@ -194,12 +211,17 @@ header, footer {
 
 /* Cooking Table */
 
-.cooking-table .lg-img {
+.cooking-table .lg-img,
+.cooking-table .sm-img {
   transition: all .5s ease-in-out;
 }
 
 .cooking-table .lg-img:hover {
   transform: scale(1.5)
+}
+
+.cooking-table .sm-img:hover {
+  transform: scale(1.7)
 }
 
 

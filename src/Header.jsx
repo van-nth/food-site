@@ -9,11 +9,11 @@ const navItems = [
   },
   {
     id: "overview",
-    name: "总论"
+    name: "简介"
   },
   {
     id: "cooking-method",
-    name: "烹调法"
+    name: "做法"
   }
 ]
 

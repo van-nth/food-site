@@ -50,7 +50,7 @@ function Overview() {
       >
         {visible ? (
           <div className="section-2 px-4 py-3 md:px-20 md:py-4">
-            <h2 className="ribbon-heading text-center mt-4 md:ml-20">Overview</h2>
+            <h2 className="ribbon-heading text-center mt-4 md:ml-20">菜肴的简介</h2>
             <div className="w-full md:grid grid-cols-3 items-center gap-4">
               <div className="text-sm md:text-xl leading-4 md:col-span-2">
                 <h2 className="main-heading text-xl text-center md:text-6xl mb-10 text-green-600">Tại sao lại gọi là cơm tấm?</h2>
@@ -76,12 +76,12 @@ function Overview() {
         }
       </div>
       <Link to="/cooking-method">
-        <div className="next-slide fixed bottom-20 right-4 flex items-center mb-4 cursor-pointer text-sm md:text-xl hover:text-green-600 hover:font-bold">
+        <h4 className="next-slide fixed bottom-24 right-8 flex items-center mb-4 cursor-pointer text-sm md:text-xl hover:text-green-600 hover:font-bold">
           <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
-          <p className="hidden md:flex">Tiếp theo: Nguyên liệu và cách làm</p>
-        </div>
+          <span className="hidden md:flex">下一页: 碎米饭的做法</span>
+        </h4>
       </Link>
     </div>
   )

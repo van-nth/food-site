@@ -16,7 +16,7 @@ function CookingTable({ steps, current }) {
                 <img 
                   src={img.src} 
                   alt="img" 
-                  className="md:rounded-full text-center md:ml-20 md:w-56 md:h-56"
+                  className="sm-img md:rounded-full text-center md:ml-20 md:w-56 md:h-56"
                 />
                 <span>{img.desc}</span>
               </div>

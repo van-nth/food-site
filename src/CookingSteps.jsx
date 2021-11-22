@@ -19,16 +19,16 @@ const { Step } = Steps;
 const steps = [
   {
     id: "first",
-    title: 'First',
-    content: 'Nấu cơm',
+    title: '首先',
+    content: '把碎米蒸好',
     headings: [
       {
         id: "nguyen-lieu-1",
-        name: "原料",
+        name: "配料",
       },
       {
         id: "cach-nau-1",
-        name: "做法"
+        name: "烹调法"
       },
       {
         id: "hoan-thanh-1",
@@ -39,33 +39,33 @@ const steps = [
       {
         id: 'nau-1',
         src: gao_tam,
-        desc: 'Gạo tấm ngon'
+        desc: '好质量碎米'
       },
       {
         id: 'nau-2',
         src: cach_nau_com,
-        desc: 'Hấp bằng lửa nhỏ'
+        desc: '用慢火蒸'
       },
       {
         id: 'nau-3',
         src: com_tam,
-        desc: 'Cơm tấm'
+        desc: '碎米饭'
       }
     ]
   },
   {
     id: "second",
-    title: 'Second',
-    content: 'Làm các món ăn kèm',
+    title: '第二',
+    content: '做几道配菜',
     img:'./imgs/gaotam.jpeg',
     headings: [
       {
         id: "nguyen-lieu-2",
-        name: "原料",
+        name: "配料",
       },
       {
         id: "cach-nau-2",
-        name: "做法"
+        name: "烹调法"
       },
       {
         id: "hoan-thanh-2",
@@ -76,46 +76,45 @@ const steps = [
       {
         id: 'nau-4',
         src: mon_an_kem,
-        desc: 'sườn heo, trứng gà, ...'
+        desc: '排骨(páigǔ)，鸡蛋, 等等'
       },
       {
         id: 'nau-5',
         src: nuong_suon,
-        desc: 'Nướng bằng than'
+        desc: '用木炭烤'
       },
       {
         id: 'nau-6',
         src: suon_nuong,
-        desc: 'Sườn nướng'
+        desc: '烤肉排(kǎoròu pái)'
       }
     ]
   },
   {
     id: "third",
-    title: 'Third',
-    content: 'Pha nước mắm, làm mỡ hành',
+    title: '第三',
+    content: '做鱼露，葱油',
     sources: [
       {
         id: 'nau-7',
         src: lam_nuoc_mam,
-        desc: '...'
+        desc: '鱼露（yú lù）'
       },
       {
         id: 'nau-8',
         src: lam_mo_hanh,
-        desc: '...'
+        desc: '葱油 （cōng yóu）'
       }
     ]
   },
   {
     id: "last",
-    title: 'Last',
-    content: 'Bày ra dĩa và thưởng thức',
+    title: '最后',
+    content: '先把所有的摆下盘子来，再趁热享用美食',
     sources: [
       {
         id: 'nau-xong',
         src: com_tam_done,
-        desc: '...'
       }
     ]
   },
@@ -147,17 +146,17 @@ const CookingSteps = () => {
       <div className="steps-action">
         {current < steps.length - 1 && (
           <Button type="primary" onClick={() => next()}>
-            Next
+            下一步
           </Button>
         )}
         {current === steps.length - 1 && (
-          <Button type="primary" onClick={() => message.success('Processing complete!')}>
-            Done
+          <Button type="primary" onClick={() => message.success('完成了!')}>
+            完成
           </Button>
         )}
         {current > 0 && (
           <Button style={{ margin: '0 8px' }} onClick={() => prev()}>
-            Previous
+            上一步
           </Button>
         )}
       </div>
