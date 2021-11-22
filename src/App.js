@@ -16,15 +16,21 @@ import Footer from "./Footer";
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route exact path="/" element={<Welcome />}></Route>
-        <Route path="/game" element={<Game />}></Route>
-        <Route path="/overview" element={<Overview />}></Route>
-        <Route path="/cooking-method" element={<CookingMethod />}></Route>
-        <Route path="/facts" element={<Facts />}></Route>
-      </Routes>
-      <Footer />
+      <header>
+        <Header />
+      </header>
+      <div className="main">
+        <Routes>
+          <Route exact path="/" element={<Welcome />}></Route>
+          <Route path="/game" element={<Game />}></Route>
+          <Route path="/overview" element={<Overview />}></Route>
+          <Route path="/cooking-method" element={<CookingMethod />}></Route>
+          <Route path="/facts" element={<Facts />}></Route>
+        </Routes>
+      </div>
+      <footer>
+        <Footer />
+      </footer>
     </Router>
   );
 }

@@ -1,22 +1,19 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
+
 const navItems = [
   {
     id: "game",
-    name: "Game"
+    name: "游戏"
   },
   {
     id: "overview",
-    name: "Overview"
+    name: "总论"
   },
   {
     id: "cooking-method",
-    name: "Cooking method"
-  },
-  {
-    id: "facts",
-    name: "Facts"
+    name: "烹调法"
   }
 ]
 
@@ -35,10 +32,10 @@ function Header() {
           <span className="text-xl md:text-xl xl:text-3xl text-white">传统美食</span>
         </div>
       </Link>
-      <ul className="nav-bar hidden md:flex space-x-2 text-sm md:space-x-6 md:text-xl xl:text-2xl cursor-pointer">
+      <ul className="nav-bar hidden md:flex space-x-2 text-sm md:space-x-8 md:text-xl xl:text-2xl cursor-pointer md:mt-4">
         {navItems.map((item) => (
           <Link to={`/${item.id}`} key={item.id}>
-            <li className="nav-link text-white font-semibold hover:font-bold">{item.name}</li>
+            <li className="nav-link text-white font-semibold hover:font-bold md:text-3xl">{item.name}</li>
           </Link>
         ))}
       </ul>
