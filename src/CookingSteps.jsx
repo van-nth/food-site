@@ -86,7 +86,7 @@ const steps = [
       {
         id: 'nau-6',
         src: suon_nuong,
-        desc: '烤肉排(kǎoròu pái)'
+        desc: '烤排骨'
       }
     ]
   },

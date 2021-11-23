@@ -6,7 +6,7 @@ import Modal from './Modal';
 
 const allButtons= [...new Set(hints.map(hint => hint.name))];
 
-const allHints = [...new Set(hints.filter(hint => hint.content !== "Chúc bạn may mắn lần sau 😅😅😅"))]
+const allHints = [...new Set(hints.filter(hint => hint.content !== "祝你下次好运！ 😅😅😅"))]
 
 console.log(allHints)
 
@@ -31,12 +31,12 @@ function Game() {
     <div className="game-page overscroll-y-none">
       <h2 className="ribbon-heading text-center mt-4 md:ml-20">游戏</h2>
       <h2 className="text-red-700 font-semibold text-center text-2xl mb-4">TRÒ CHƠI: ĐOÁN TÊN MÓN ĂN</h2>
-      <ul>
-        <strong className="underline">Luật chơi</strong>: Có tổng cộng 6 gợi ý, các đội lần lượt chọn số từ 1-6 để tìm gợi ý cho câu hỏi <strong className="italic">"Chủ đề hôm nay của nhóm 3 là món ăn gì?"</strong>
+      <ul className="text sm md:text-xl">
+        <strong className="underline">游戏规则</strong>: 总共有6个暗示, 大家会轮流打开“1-6”好吗来寻找暗示，然后回答问题<strong className="italic">"今天我们组会讲到哪道菜肴？"</strong>
         <br />
-        Có 2 cách dành chiến thắng:
-        <li>1) Trước khi 6 gợi ý được mở, đội nào đoán đúng đáp án sẽ giành chiến thắng</li>
-        <li>2) Sau khi cả 6 gợi ý được mở, sẽ có 15 giây để đoán đáp án, đội nào đoán đúng sẽ giành chiến thắng</li>
+        *** 为了取得胜利，有两个方法：
+        <li>1) 6个暗示打开之前，哪个组找到对答案会赢</li>
+        <li>2) 6个暗示打开以后, 在<strong>15秒</strong>之内, 哪个组找到对答案会赢</li>
       </ul>
       <div className="game md:flex justify-between bg-gray-200 border-2 border-gray-500 rounded-md px-4 py-3 mt-6 overflow-hidden">
         <div className="col-1 xl:flex-wrap">
@@ -78,32 +78,7 @@ function Game() {
           </div>
         </div>
         
-        <div className="col-2">
-          <button
-            onClick={() => setShowAllHints(!showAllHints)}
-            className="my-4 md:mt-0 flex items-center justify-center bg-gray-900 
-            text-white text-xl border-none rounded-md px-4 py-3 mb-4 hover:opacity-10"
-          >
-            <span>游戏暗示</span> 
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-            </svg>
-          </button>
-          {showAllHints && (
-            <ul className="md:w-2/3">
-              {allHints.map((v) => (
-                <li 
-                  key={v.id}
-                  className="list-disc text-sm md:text-normal"
-                >
-                  {v.content}
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-        
-        <div className="col-3 text-center">
+        <div className="col-2 text-center">
           <button
             onClick={() => setShowCountDown(!showCountDown)}
           >
@@ -115,6 +90,31 @@ function Game() {
             <CountDown hours={0} minutes={0} seconds={15} />
           )}
          </div>
+        
+        <div className="col-3">
+          <button
+            onClick={() => setShowAllHints(!showAllHints)}
+            className="my-4 md:mt-0 flex items-center justify-center bg-gray-900 
+            text-white text-xl border-none rounded-md px-4 py-3 mb-4 hover:opacity-10"
+          >
+            <span>所有的暗示</span> 
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          {showAllHints && (
+            <ul className="md:w-2/3">
+              {allHints.map((v) => (
+                <li 
+                  key={v.id}
+                  className="list-disc text-sm md:text-xl"
+                >
+                  {v.content}
+                </li>
+              ))}
+            </ul>
+          )}
+        </div>
       </div>
       
       <div className="answer">

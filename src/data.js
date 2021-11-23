@@ -11,7 +11,7 @@ const hints = [
   {
     id: "hint-1",
     name: 1,
-    content: "Một trong những món ăn phổ biến nhất tại TP. Hồ Chí Minh (Sài Gòn)",
+    content: "是胡志明市（西贡）最受欢迎的菜之一",
     imgs: [
       {
         id: 'sai-gon',
@@ -22,7 +22,7 @@ const hints = [
   {
     id: "hint-2",
     name: 2,
-    content: "Chúc bạn may mắn lần sau 😅😅😅",
+    content: "祝你下次好运！ 😅😅😅",
     imgs: [
       {
         id: 'fail',
@@ -33,7 +33,7 @@ const hints = [
   {
     id: "hint-3",
     name: 3,
-    content: "Nước mắm và mỡ hành là linh hồn của món này",
+    content: "鱼露和洋葱油是这道菜的灵魂",
     imgs: [
       {
         id: "nuoc-mam",
@@ -50,7 +50,7 @@ const hints = [
   {
     id: "hint-4",
     name: 4,
-    content: "Nguyên liệu chính tạo nên món ăn là một loại gạo rất đặc biệt, không thể tìm thấy ở món nào khác",
+    content: "这道菜的主要原料是一种非常特别的大米",
     imgs: [
       {
         id: 'gao-tam',
@@ -61,7 +61,7 @@ const hints = [
   {
     id: "hint-5",
     name: 5,
-    content: "Thường ăn kèm với sườn nướng, trứng ốp la",
+    content: "通常佐以烤排骨、煎蛋卷",
     imgs: [
       {
         id: "suon-nuong",
@@ -78,7 +78,7 @@ const hints = [
   {
     id: "hint-6",
     name: 6,
-    content: "Chúc bạn may mắn lần sau 😅😅😅",
+    content: "祝你下次好运！ 😅😅😅",
     imgs: [
       {
         id: 'fail_2',
