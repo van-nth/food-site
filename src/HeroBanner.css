@@ -1,27 +1,18 @@
 .hero {
-  position: relative; 
   height: 80vh;
   width: 100%;
   overflow: hidden;
 }
 
-.hero::before {
-  content: "";
-  background-image: url(./imgs/bg_img_1.jpeg);
-  background-size: cover;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  filter: brightness(40%);
-}
-
 .main-title {
-  position: relative;
   animation-duration: 3s;
   animation-name: slidein;
   font-weight: 900;
+}
+
+.equal_sign {
+  width: 6px;
+  height: 30px;
 }
 
 @keyframes slidein {

@@ -2,18 +2,18 @@ body.active-modal {
   overflow-y: hidden;
 }
 
-.game-modal .btn-modal {
+.btn-modal {
   padding: 10px 20px;
   display: block;
   margin: 100px auto 0;
   font-size: 18px;
 }
 
-.game-modal .modal {
+.modal {
   z-index: 100000;
 }
 
-.game-modal .modal, .overlay {
+.modal, .overlay {
   display: block;
   width: 100vw;
   height: 100vh;
@@ -24,10 +24,10 @@ body.active-modal {
   position: fixed;
 }
 
-.game-modal .overlay {
+.overlay {
   background: rgba(49,49,49,0.8);
 }
-.game-modal .modal-content {
+.modal-content {
   position: absolute;
   top: 40%;
   left: 50%;
@@ -40,7 +40,7 @@ body.active-modal {
   min-width: 300px;
 }
 
-.game-modal .close-modal {
+.close-modal {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -49,7 +49,7 @@ body.active-modal {
   font-weight: 700;
 }
 
-.game-modal .no-bg {
+.no-bg {
   background-color: #FFF !important;
   color: black !important; 
 }

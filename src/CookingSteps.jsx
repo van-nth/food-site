@@ -24,7 +24,7 @@ const steps = [
     headings: [
       {
         id: "nguyen-lieu-1",
-        name: "配料",
+        name: "原料",
       },
       {
         id: "cach-nau-1",
@@ -61,7 +61,7 @@ const steps = [
     headings: [
       {
         id: "nguyen-lieu-2",
-        name: "配料",
+        name: "原料",
       },
       {
         id: "cach-nau-2",
@@ -76,12 +76,12 @@ const steps = [
       {
         id: 'nau-4',
         src: mon_an_kem,
-        desc: '排骨(páigǔ)，鸡蛋, 等等'
+        desc: '排骨(páigǔ: sườn heo)，鸡蛋, 等等'
       },
       {
         id: 'nau-5',
         src: nuong_suon,
-        desc: '用木炭烤'
+        desc: '用木炭(mùtàn)烤: nướng bằng than hoa'
       },
       {
         id: 'nau-6',
@@ -110,7 +110,7 @@ const steps = [
   {
     id: "last",
     title: '最后',
-    content: '先把所有的摆下盘子来，再趁热享用美食',
+    content: '趁热享用吧！',
     sources: [
       {
         id: 'nau-xong',

@@ -36,8 +36,8 @@ export default function Modal() {
     <div className="game-modal text-center">
       <button
         onClick={toggleModal}
-        className="mt-16 flex items-center justify-center bg-gray-900 text-white text-xl 
-        border-none rounded-md px-4 py-3 mb-4 hover:opacity-10"
+        className="mt-16 flex items-center justify-center text-gray-800 text-xl
+          border-2 border-gray-800 rounded-md px-4 py-3 mb-4 hover:bg-gray-800 hover:text-white"
       >
         答案
         <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

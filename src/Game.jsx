@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import hints from './data';
 import CountDown from './CountDown';
 import Modal from './Modal';
+import PrizeModal from './PrizeModal';
 
 const allButtons= [...new Set(hints.map(hint => hint.name))];
 
@@ -11,6 +12,8 @@ const allHints = [...new Set(hints.filter(hint => hint.content !== "祝你下次
 console.log(allHints)
 
 function Game() {
+  const [showGame, setShowGame] = useState(false);
+  const [showPrize, setShowPrize] = useState(false);
   const [hintItems, setHintItems] = useState([]);
   const [buttons, setButtons] = useState(allButtons);
   const [tab, setTab] = useState('');
@@ -30,17 +33,27 @@ function Game() {
   return (
     <div className="game-page overscroll-y-none">
       <h2 className="ribbon-heading text-center mt-4 md:ml-20">游戏</h2>
-      <h2 className="text-red-700 font-semibold text-center text-2xl mb-4">TRÒ CHƠI: ĐOÁN TÊN MÓN ĂN</h2>
+      <h2 className="text-red-700 font-semibold text-center text-2xl mb-4">游戏：猜一猜菜名</h2>
       <ul className="text sm md:text-xl">
         <strong className="underline">游戏规则</strong>: 总共有6个暗示, 大家会轮流打开“1-6”好吗来寻找暗示，然后回答问题<strong className="italic">"今天我们组会讲到哪道菜肴？"</strong>
         <br />
         *** 为了取得胜利，有两个方法：
-        <li>1) 6个暗示打开之前，哪个组找到对答案会赢</li>
-        <li>2) 6个暗示打开以后, 在<strong>15秒</strong>之内, 哪个组找到对答案会赢</li>
+        <li>1) 6个暗示打开之前，谁找到对答案会赢</li>
+        <li>2) 6个暗示打开以后, 在<strong>15秒</strong>之内, 谁找到对答案会赢</li>
       </ul>
-      <div className="game md:flex justify-between bg-gray-200 border-2 border-gray-500 rounded-md px-4 py-3 mt-6 overflow-hidden">
-        <div className="col-1 xl:flex-wrap">
-          <div className="buttons flex items-center justify-center space-x-4">
+      
+      <div className="flex items-center justify-center">
+        <button
+          onClick={() => setShowGame(!showGame)}
+          className="my-4 md:mt-0 flex items-center justify-center w-40 bg-red-900
+              text-white text-xl border-none rounded-md px-4 py-3 mb-4 hover:opacity-10 text-center"
+        >开始
+        </button>
+      </div>
+      {showGame && (
+        <div className="game md:flex justify-between bg-gray-200 border-2 border-gray-500 rounded-md px-4 py-3 mt-6 overflow-hidden">
+          <div className="col-1 xl:flex-wrap">
+            <div className="buttons flex items-center justify-center space-x-4">
             {buttons.map((button, i)=>(
               <button
                 key={i}
@@ -115,7 +128,22 @@ function Game() {
             </ul>
           )}
         </div>
-      </div>
+        </div>
+      )}
+      
+      <button
+        onClick={() => setShowPrize(!showPrize)}
+        className="mt-16 flex items-center justify-center text-gray-800 text-xl
+        border-2 border-gray-800 rounded-md px-4 py-3 mb-4 hover:bg-gray-800 hover:text-white"
+      >
+        奖品
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+      </button>
+      {showPrize && (
+        <PrizeModal showPrice={showPrize} setShowPrize={setShowPrize}/>
+      )}
       
       <div className="answer">
         <Modal />
